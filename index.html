@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<TITLE> Company </TITLE>
+	<link href="style.css" rel="stylesheet">
+	<script src="functions.js"></script>
+</HEAD>
+<BODY>
+
+	
+<form align="center" method="GET">
+      <input type="text"  id="company_id" placeholder="Company name" class="main_style_form">
+	  <input type="text"  id="ces_id" placeholder="Estimated Earnings" class="main_style_form"><br>
+      <SELECT id="choose_type_company" onchange="child_company()" class="main_style_form">
+					<OPTION  value="main">Main company</OPTION>
+					<OPTION  value="subsidiary" >Subsidiary company</OPTION>
+				</SELECT><br>
+				 <SELECT id="choose_parent_company" class="main_style_form">
+					
+				</SELECT><br>	 
+	<input class="button button1" type="button" id="mysubmit" value="Add company" onClick="addMoreRows()" >
+	<input class="button button1" type="button" id="mysubmit" value="Delete" onClick="deleteRow('tbl_id')">
+</form>
+<input type="text" id="searchTerm" onkeyup="doSearch()" placeholder="Search for names.." class="main_style_form"/>
+<table id="tbl_id" style="text-align:center" align="center" valign="top">
+      <thead>
+        <tr>
+        <th>№</th>
+        <th>Name company</th>
+        <th>Type company</th>
+        <th>Company Estimated Earnings</th>
+		<th>Company Estimated Earnings + Child Companies Estimated Earnings</th>
+	    <th>Edit</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+</table>
+	</center>
+</BODY>
+</HTML>
